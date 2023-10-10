@@ -1,0 +1,115 @@
+@import "./variables.scss";
+@import "~bootstrap/scss/bootstrap";
+
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+
+.nav {
+    --#{$prefix}nav-link-color: var(--bs-secondary);;
+    --#{$prefix}nav-link-hover-color: var(--bs-secondary);;
+}
+.nav-link {
+    letter-spacing: 0.3em;
+    font-size: small;
+}
+
+.navbar {
+    border-bottom: medium solid $primary;
+    background-color: #FFF;
+}
+.nav-link:hover {
+    box-shadow: 0 2px 9px $primary;
+    border-radius: 20px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color: black;
+    background-color: unset
+}
+
+hr.solid {
+    border-bottom: 1px solid $primary;
+    color: $primary;
+    opacity: unset;
+}
+
+.carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    height: 30px
+}
+
+.carousel-control-prev-icon {
+    right: 150px;
+    filter: invert(1);
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
+
+.carousel-control-next-icon {
+    left: 150px;
+    filter: invert(1);
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+}
+
+@mixin make-container($max-width, $padding-x: $container-padding-x) {
+    max-width: $max-width;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+.main-container {
+    @include make-container(1575px);
+}
+.modal-content{
+    box-shadow: 0 2px 39px $primary;
+}
+.modal {
+    --#{$prefix}modal-border-radius: 40px;
+}
+.modal-backdrop{
+    --#{$prefix}backdrop-bg: unset;
+    --#{$prefix}backdrop-opacity: 1;
+}
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: var(--bs-secondary);
+}
+.contactButton{
+    color: white !important;
+    width: 100%;
+}
+.contactButton:hover{
+    color: white !important;
+    letter-spacing: 0.3em;
+}
+.redText {
+    color: var(--bs-primary);
+}
+.greenText {
+    color: green;
+}
+.form-label{
+    letter-spacing: 0.2em;
+    color: var(--bs-secondary);
+    font-size: small;
+}
+.form-control::placeholder{
+    color: var(--bs-secondary) !important;
+    font-size: small;
+    letter-spacing: 0.2em;
+}
+.formSection{
+    text-align: left
+}
